@@ -17,8 +17,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun init() {
         btnSend.setOnClickListener {
-            if (TextUtils.isEmpty(etSomeText.text.toString())) {
-                Toasty.error(this, "Введите текст", Toast.LENGTH_SHORT, true).show();
+            var text = etSomeText.text.toString().isNullOrEmpty()
+            if (text) {
+                toasty("Введите текст")
             } else {
                 val intent = Intent(this, SecondActivity2::class.java)
                 intent.putExtra("key", etSomeText.text.toString())

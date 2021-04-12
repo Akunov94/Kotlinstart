@@ -3,4 +3,5 @@
     <string name="some_text">Введите текст</string>
     <string name="btn_send">Send</string>
     <string name="btnBack">Назад</string>
+    <string name="mission_completed">Mission Completed</string>
 </resources>

@@ -3,9 +3,8 @@ package com.example.kotlinstart
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.TextUtils
-import android.widget.Toast
-import es.dmoral.toasty.Toasty
+import android.widget.Button
+import com.example.kotlinstart.extension.displayToast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -19,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         btnSend.setOnClickListener {
             var text = etSomeText.text.toString().isNullOrEmpty()
             if (text) {
-                toasty("Введите текст")
+                displayToast("введите текст")
             } else {
                 val intent = Intent(this, SecondActivity2::class.java)
                 intent.putExtra("key", etSomeText.text.toString())
